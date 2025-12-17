@@ -1,6 +1,8 @@
 <template>
-  <div>RequestOPedia</div>
-  <div class="container p-4">
+  <div v-if="destinationObj.isLoading" class="d-flex justify-content-center p-4">
+    <Loader></Loader>
+  </div>
+  <div class="container p-4 bg-white" v-else>
     <div>
       <h1 class="text-success text-center">TravelOpedia</h1>
     </div>
@@ -29,10 +31,13 @@
 <script setup>
 import axios from "axios";
 import { onMounted, reactive } from "vue";
+import Loader from "./Components/Loader.vue";
 
 const destinationObj = reactive({
   destinationList: [],
+  isLoading: false,
 });
+
 onMounted(() => {
   // fetch("https://jsonplaceholder.typicode.com/users")
   //   .then((response) => response.json())
@@ -41,15 +46,19 @@ onMounted(() => {
   //     userObj.users = data;
   //   });
 
-
   loadDestination();
-
 });
-
-async function loadDestination() {
-  await axios.get("http://localhost:3000/destination").then((response) => {
-    console.log(response.data);
-    destinationObj.destinationList = response.data;
+ function loadDestination() {
+  destinationObj.isLoading = true;
+    axios.get("http://localhost:3000/destination").then((response) => {
+    new Promise((resolve) => setTimeout(resolve, 2000)).then(() => {
+      console.log(response.data);
+      destinationObj.destinationList = response.data;
+      destinationObj.isLoading = false;
+    });
+    
   });
+  
+  
 }
 </script>
