@@ -1,0 +1,74 @@
+{
+  "destination": [
+    {
+      "id": 1,
+      "name": "Bangkok",
+      "days": 7,
+      "funFact": "Bangkok is the capital and most populous city of Thailand",
+      "price": 1000
+    },
+    {
+      "id": 2,
+      "name": "Phuket",
+      "days": 5,
+      "funFact": "Phuket is a city in Thailand known for its beaches",
+      "price": 800
+    },
+    {
+      "id": 3,
+      "name": "Chiang Mai",
+      "days": 4,
+      "funFact": "Chiang Mai is famous for its ancient temples",
+      "price": 650
+    },
+    {
+      "id": 4,
+      "name": "Krabi",
+      "days": 6,
+      "funFact": "Krabi is known for its limestone cliffs and islands",
+      "price": 900
+    },
+    {
+      "id": 5,
+      "name": "Pattaya",
+      "days": 3,
+      "funFact": "Pattaya is a popular beach resort city",
+      "price": 500
+    },
+    {
+      "id": 6,
+      "name": "Ayutthaya",
+      "days": 2,
+      "funFact": "Ayutthaya was the capital of the Kingdom of Siam",
+      "price": 400
+    },
+    {
+      "id": 7,
+      "name": "Koh Samui",
+      "days": 5,
+      "funFact": "Koh Samui is famous for its palm-fringed beaches",
+      "price": 850
+    },
+    {
+      "id": 8,
+      "name": "Hua Hin",
+      "days": 4,
+      "funFact": "Hua Hin is a seaside town popular with locals",
+      "price": 600
+    },
+    {
+      "id": 9,
+      "name": "Koh Phi Phi",
+      "days": 3,
+      "funFact": "Koh Phi Phi is known for its crystal clear waters",
+      "price": 750
+    },
+    {
+      "id": 10,
+      "name": "Sukhothai",
+      "days": 2,
+      "funFact": "Sukhothai is home to historic ruins and temples",
+      "price": 450
+    }
+  ]
+}
