@@ -1,7 +1,7 @@
 <template>
   <div>RequestOPedia</div>
   <div class="container p-4">
-    <div >
+    <div>
       <h1 class="text-success text-center">TravelOpedia</h1>
     </div>
     <hr />
@@ -14,7 +14,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="destination in destinationObj.destinationList" :key="destination.id">
+        <tr
+          v-for="destination in destinationObj.destinationList"
+          :key="destination.id"
+        >
           <td>{{ destination.name }}</td>
           <td>{{ destination.days }}</td>
           <td>{{ destination.price }}</td>
@@ -22,7 +25,6 @@
       </tbody>
     </table>
   </div>
-
 </template>
 <script setup>
 import axios from "axios";
@@ -39,9 +41,15 @@ onMounted(() => {
   //     userObj.users = data;
   //   });
 
-  axios.get("http://localhost:3000/destination").then((response) => {
+
+  loadDestination();
+
+});
+
+async function loadDestination() {
+  await axios.get("http://localhost:3000/destination").then((response) => {
     console.log(response.data);
     destinationObj.destinationList = response.data;
   });
-});
+}
 </script>
